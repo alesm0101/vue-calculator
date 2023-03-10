@@ -52,13 +52,8 @@ git commit -m "Setup page"
 git subtree push --prefix dist origin gh-pages
 ```
 
-### Update
+### Recreate 
 ```
-git rebase origin/main
-git push --force origin/gh-pages
-yarn build
+git branch -D gh-pages
 ```
-git add dist -f
-git commit -m "Setup page"
-git subtree push --prefix dist origin gh-pages
-```
+Then follow the setup stes again from main branch
