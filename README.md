@@ -32,3 +32,33 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+# calculator gh-pages
+[website url](https://alesm0101.github.io/vue-calculator/)
+
+## Pres Setup
+in vue.config.js:
+```
+publicPath:  process.env.NODE_ENV === "production" ? "/vue-calculator" : "",
+```
+
+## Setup
+from main branch:
+```
+git checkout -b gh-pages
+yarn build
+git add dist -f
+git commit -m "Setup page"
+git subtree push --prefix dist origin gh-pages
+```
+
+### Update
+```
+git rebase origin/main
+git push --force origin/gh-pages
+yarn build
+```
+git add dist -f
+git commit -m "Setup page"
+git subtree push --prefix dist origin gh-pages
+```

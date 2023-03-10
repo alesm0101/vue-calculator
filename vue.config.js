@@ -10,7 +10,7 @@ function addStyleResource(rule) {
 }
 
 module.exports = defineConfig({
-  publicPath:  process.env.NODE_ENV === "production" ? "/vue-calculator/" : "",
+  publicPath:  process.env.NODE_ENV === "production" ? "/vue-calculator" : "",
   transpileDependencies: true,
   chainWebpack: (config) => {
     const types = ["vue-modules", "vue", "normal-modules", "normal"];
