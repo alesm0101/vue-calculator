@@ -52,7 +52,7 @@ git commit -m "Setup page"
 git subtree push --prefix dist origin gh-pages
 ```
 
-### Recreate 
+### Recreate gh-pages
 ```
 git branch -D gh-pages
 ```
